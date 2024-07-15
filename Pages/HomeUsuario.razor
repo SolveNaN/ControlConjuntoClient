@@ -1,5 +1,72 @@
-﻿<h3>HomeUsuario</h3>
+﻿@page "/homeusuario"
 
-@code {
+<style>
+    .alert {
+        margin-bottom: 15px;
+    }
+</style>
 
-}
+<section id="features" class="padd-section text-center">
+    <div class="ps-4 pe-4" data-aos="fade-up">
+        <div class="section-title text-center">
+            <h2>Panel informativo</h2>
+            <p class="separator">Bienvenido, aca podrás tener una pequeña visualizacion para ponerte al dia en todas tus cosas</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-3">
+                <div class="feature-block">
+                    <h4>Anuncios</h4>
+                    <div class="alert alert-info" role="alert">
+                        <strong>Nueva Actualización:</strong> Se ha implementado una nueva funcionalidad en el sistema.
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Mantenimiento Programado:</strong> El sistema estará en mantenimiento el próximo sábado.
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                        <strong>Felicitaciones:</strong> La comunidad ha alcanzado un nuevo hito.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="feature-block">
+                            <h4>Pagos pendientes o alertas</h4>
+                            <div class="alert alert-danger" role="alert">
+                                <strong>Pago Atrasado:</strong> Tienes un pago atrasado de $200.000 en la categoría de agua.
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                <strong>Próximo Pago:</strong> Recuerda que el próximo pago de luz vence en 5 días.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="feature-block">
+                            <h4>Respuesta de los tickets</h4>
+                            <div class="alert alert-secondary" role="alert">
+                                <strong>Ticket #1234:</strong> Problema con el acceso al portal resuelto.
+                            </div>
+                            <div class="alert alert-secondary" role="alert">
+                                <strong>Ticket #1235:</strong> Actualización del perfil completada.
+                            </div>
+                            <button class="btn btn-primary mt-2">Crear nuevo ticket</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="feature-block">
+                            <h4>Respuesta de solicitud de área común</h4>
+                            <div class="alert alert-info" role="alert">
+                                <strong>Solicitud #5678:</strong> Tu solicitud de reserva del salón de eventos está en proceso.
+                            </div>
+                            <p class="text-warning">Estado en proceso, aprobado o cancelado</p>
+                            <button class="btn btn-primary mt-2">Hacer una nueva solicitud de área común</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
