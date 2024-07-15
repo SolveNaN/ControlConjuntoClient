@@ -1,5 +1,266 @@
-﻿﻿<h3>HomeAdmin</h3>
+﻿@page "/admin"
 
-@code {
+<section id="features" class="padd-section text-center">
 
-}
+    <div class="ps-4 pe-4" data-aos="fade-up">
+
+        <div class="section-title text-center">
+            <h2>Panel de Administración</h2>
+            <p class="separator">Bienvenido al Panel de Administración. Gestiona tus recursos y usuarios de manera eficiente.</p>
+        </div>
+
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-2">
+                <div class="feature-block">
+                    <img src="assets/img/anuncio.png" alt="img">
+                    <h4>Anuncios y Noticias</h4>
+                    <section id="pricing">
+                        <div>
+                            <div>
+                                <div>
+                                    <div class="block-pricing">
+                                        <div class="pricing-table">
+                                            <ul>
+                                                <li data-aos="fade-up" data-aos-delay="20">
+                                                    <div class="col">
+                                                        <div class="text-start">
+                                                            <b>Reunión de Consejo</b>
+                                                            <p>Convocatoria: Reunión importante del consejo de administración.</p>
+                                                        </div>
+                                                        <div class="text-end">
+                                                            <a href="#get-started" class="btn-get-started scrollto"><i class="vi bi-chevron-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li data-aos="fade-up" data-aos-delay="20">
+                                                    <div class="col">
+                                                        <div class="text-start">
+                                                            <b>Reunión de Consejo</b>
+                                                            <p>Convocatoria: Reunión importante del consejo de administración.</p>
+                                                        </div>
+                                                        <div class="text-end">
+                                                            <a href="#get-started" class="btn-get-started scrollto"><i class="vi bi-chevron-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li data-aos="fade-up" data-aos-delay="20">
+                                                    <div class="col">
+                                                        <div class="text-start">
+                                                            <b>Reunión de Consejo</b>
+                                                            <p>Convocatoria: Reunión importante del consejo de administración.</p>
+                                                        </div>
+                                                        <div class="text-end">
+                                                            <a href="#get-started" class="btn-get-started scrollto"><i class="vi bi-chevron-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                            <div class="table_btn" data-aos="fade-up" data-aos-delay="20">
+                                                <a href="#" class="btn">Ver todos los anuncios</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="row-lg-8">
+                    <div class="feature-block">
+                        <img src="assets/img/pago.png" alt="img">
+                        <h4>Pagos atrasados</h4>
+
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Cliente</th>
+                                    <th scope="col">Categoria</th>
+                                    <th scope="col">Valor</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Carlos</td>
+                                    <td>Agua</td>
+                                    <td>$150.000</td>
+                                    <td>
+                                        <a href="#get-started" class="btn-get-started scrollto"><i class="vi bi-chevron-right"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Huesly</td>
+                                    <td>Luz</td>
+                                    <td>$240.000</td>
+                                    <td>
+                                        <a href="#get-started" class="btn-get-started scrollto"><i class="vi bi-chevron-right"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Arley</td>
+                                    <td>Apartamento</td>
+                                    <td>$750.000</td>
+                                    <td>
+                                        <a href="#get-started" class="btn-get-started scrollto"><i class="vi bi-chevron-right"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <section id="pricing">
+                            <div>
+                                <div>
+                                    <div>
+                                        <div class="block-pricing">
+                                            <div class="pricing-table">
+                                                <div class="table_btn" data-aos="fade-up" data-aos-delay="20">
+                                                    <a href="#" class="btn">Ver todos los pagos</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row-lg-8">
+                    <div class="feature-block">
+                        <img src="assets/img//pago.png" alt="img">
+                        <h4>Solicitudes areas comunes</h4>
+
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Cliente</th>
+                                    <th scope="col">Categoria</th>
+                                    <th scope="col">Valor</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Carlos</td>
+                                    <td>Agua</td>
+                                    <td>$150.000</td>
+                                    <td>
+                                        <a href="#get-started" class="btn-get-started scrollto"><i class="vi bi-chevron-right"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Huesly</td>
+                                    <td>Luz</td>
+                                    <td>$240.000</td>
+                                    <td>
+                                        <a href="#get-started" class="btn-get-started scrollto"><i class="vi bi-chevron-right"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Arley</td>
+                                    <td>Apartamento</td>
+                                    <td>$750.000</td>
+                                    <td>
+                                        <a href="#get-started" class="btn-get-started scrollto"><i class="vi bi-chevron-right"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <section id="pricing">
+                            <div>
+                                <div>
+                                    <div>
+                                        <div class="block-pricing">
+                                            <div class="pricing-table">
+                                                <div class="table_btn" data-aos="fade-up" data-aos-delay="20">
+                                                    <a href="#" class="btn">Ver todas las solicitudes</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="feature-block">
+                    <img src="assets/img/soporte.png" alt="img">
+                    <h4>Tickets Pendientes</h4>
+                    <section id="pricing">
+                        <div>
+                            <div>
+                                <div>
+                                    <div class="block-pricing">
+                                        <div class="pricing-table">
+                                            <ul>
+                                                <li data-aos="fade-up" data-aos-delay="20">
+                                                    <div>
+                                                        <div class="text-start">
+                                                            <b>Ticket #1234</b>
+                                                            <p>Problema con el acceso al portal de usuarios.</p>
+                                                        </div>
+                                                        <div class="text-end">
+                                                            <a href="#get-started" class="btn-get-started scrollto"><i class="vi bi-chevron-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li data-aos="fade-up" data-aos-delay="20">
+                                                    <div>
+                                                        <div class="text-start">
+                                                            <b>Ticket #1234</b>
+                                                            <p>Problema con el acceso al portal de usuarios.</p>
+                                                        </div>
+                                                        <div class="text-end">
+                                                            <a href="#get-started" class="btn-get-started scrollto"><i class="vi bi-chevron-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li data-aos="fade-up" data-aos-delay="20">
+                                                    <div>
+                                                        <div class="text-start">
+                                                            <b>Ticket #1234</b>
+                                                            <p>Problema con el acceso al portal de usuarios.</p>
+                                                        </div>
+                                                        <div class="text-end">
+                                                            <a href="#get-started" class="btn-get-started scrollto"><i class="vi bi-chevron-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="table_btn" data-aos="fade-up" data-aos-delay="20">
+                                                <a href="#" class="btn">Ver todos los anuncios</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
