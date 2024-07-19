@@ -1,10 +1,22 @@
-﻿ <!-- ======= Hero Section ======= -->
+﻿@using ControlConjuntoClient.Shared
+@inject HttpClient Http
+@inject NavigationManager Navigate
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject IJSRuntime JS
+ <!-- ======= Hero Section ======= -->
 <section id="hero">
     <div class="hero-container" data-aos="fade-in">
         <h1>Bienvenido a ControlConjunto</h1>
         <h2>Administracion de conjuntos residenciales y más...</h2>
-        <img src="assets/img/FondoBild.jpg" width="760" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
-        <a href="#get-started" class="btn-get-started scrollto">Comenzar</a>
+        <div class="row">
+            <div class="col-6">
+                <img src="assets/img/FondoBild.jpg" width="350" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
+            </div>
+            <div class="col-6">
+                <img src="assets/img/Building.png" width="700" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
+            </div>
+        </div>
+        <a href="#get-started" class="btn-get-started scrollto" data-bs-toggle="modal" data-bs-target="#ModalLogin">Comenzar</a>
         <div class="btns">
             <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
             <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
@@ -13,32 +25,129 @@
     </div>
 </section><!-- End Hero Section -->
 <!-- ======= About Us Section ======= -->
-    <section id="about-us" class="about-us padd-section">
-      <div class="container" data-aos="fade-up">
+<section id="about-us" class="about-us padd-section">
+    <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
 
-          <div class="col-md-5 col-lg-3">
-            <img src="assets/img/about-img.png" alt="About" data-aos="zoom-in" data-aos-delay="100">
-          </div>
-
-          <div class="col-md-7 col-lg-5">
-            <div class="about-content" data-aos="fade-left" data-aos-delay="100">
-
-              <h2><span>eStartup</span>UI Design Mobile </h2>
-              <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-              </p>
-
-              <ul class="list-unstyled">
-                <li><i class="vi bi-chevron-right"></i>Creative Design</li>
-                <li><i class="vi bi-chevron-right"></i>Retina Ready</li>
-                <li><i class="vi bi-chevron-right"></i>Easy to Use</li>
-                <li><i class="vi bi-chevron-right"></i>Unlimited Features</li>
-                <li><i class="vi bi-chevron-right"></i>Unlimited Features</li>
-              </ul>
-
+            <div class="col-md-5 col-lg-3">
+                <img src="assets/img/about-img.png" alt="About" data-aos="zoom-in" data-aos-delay="100">
             </div>
-          </div>
+
+            <div class="col-md-7 col-lg-5">
+                <div class="about-content" data-aos="fade-left" data-aos-delay="100">
+
+                    <h2>ControlConjunto UI Design Mobile </h2>
+                    <p>
+                        ControlConjunto disponible para dispositivos Andrioid y iOS, con el sopote y gestión que necesitas. Gestiona tus espacios desde cualquier lugar y accede a tus configuraciones
+                    </p>
+
+                    <ul class="list-unstyled">
+                        <li><i class="vi bi-chevron-right"></i>Gestiona tus espacios</li>
+                        <li><i class="vi bi-chevron-right"></i>Reserva áreas comunes</li>
+                        <li><i class="vi bi-chevron-right"></i>Consulta tus facturas</li>
+                        <li><i class="vi bi-chevron-right"></i>Observa los movimientos de la administración</li>
+                        <li><i class="vi bi-chevron-right"></i>Pide servicios</li>
+                        <li>
+                            <button type="button" class="btn btn-success">Descargar App</button>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
 
         </div>
-      </div>
-    </section><!-- End About Us Section -->
+    </div>
+</section><!-- End About Us Section -->
+<!-- ======= Blog Section ======= -->
+<section id="blog" class="padd-sectio">
+
+    <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+
+            <h2>Ultimos Anuncios</h2>
+            <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="block-blog text-left">
+                    <a href="#"><img src="assets/img/blog/blog-image-1.jpg" alt="img"></a>
+                    <div class="content-blog">
+                        <h4><a href="#">Apartamentos en reta y a la venta</a></h4>
+                        <span>05, juin 2017</span>
+                        <a class="float-end readmore" href="#">read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="block-blog text-left">
+                    <a href="#"><img src="assets/img/blog/blog-image-2.jpg" class="img-responsive" alt="img"></a>
+                    <div class="content-blog">
+                        <h4><a href="#">Eventos del mes</a></h4>
+                        <span>05, juin 2017</span>
+                        <a class="float-end readmore" href="#">read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="block-blog text-left">
+                    <a href="#"><img src="assets/img/blog/blog-image-3.jpg" class="img-responsive" alt="img"></a>
+                    <div class="content-blog">
+                        <h4><a href="#">Espacios de integración en Real-Buildind Tower</a></h4>
+                        <span>05, juin 2017</span>
+                        <a class="float-end readmore" href="#">read more</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section><!-- End Blog Section -->
+
+<!-- Modal -->
+<div class="modal fade" id="ModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- ======= Newsletter Section ======= -->
+            <section id="newsletter" class="newsletter text-center">
+                <div class="overlay padd-section">
+                    <div class="container" data-aos="zoom-in">
+
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <div class="d-flex" method="POST" action="#">
+                                    <input type="email" class="form-control " placeholder="Email" >
+                                    <input type="email" class="form-control " @bind-value=token placeholder="Contraseña" >
+                                    <button type="submit" class="btn btn-default"><i class="bi bi-location-arrow" @onclick=IniciarSesion></i>Ingresar</button>
+                                </div>
+                            </div>
+                        </div>                   
+
+                    </div>
+                </div>
+            </section><!-- End Newsletter Section -->
+        </div>
+    </div>
+</div>
+@code {
+    string token = null;
+    Conexion miconexion = new Conexion();
+    UsuarioDTO usuario = new UsuarioDTO();
+    async Task IniciarSesion()
+    {
+        //var resultado = await Http.PostAsJsonAsync($"{miconexion.Servidor}/api/A4_Usuario/Login", usuario);
+        //token = await resultado.Content.ReadAsStringAsync();
+        if (token is not null) { }
+        {
+            await JS.InvokeVoidAsync("localStorage.setItem", "Token", token);
+            await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        }
+
+        Navigate.NavigateTo("/");
+    }
+}
